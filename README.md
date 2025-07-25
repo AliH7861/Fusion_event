@@ -103,14 +103,6 @@ Process the raw camera and LiDAR data from both vehicles to:
 
 🔹 Output a visual representation showing detected agents from both perspectives.
 
-## 🔍 GUI & Frontend what tech is used
-
-(Dummy text regarding the GUI)
-
-🔹 LiDAR provides accurate 3D data but lacks color information.
-
-🔹 Cameras capture rich visuals but are sensitive to lighting conditions.
-
 ## 🔍 GUI & Frontend
 
 The dashboard interface is built using **PyQt6** for a modern, responsive car dashboard look.
