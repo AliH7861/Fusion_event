@@ -23,7 +23,7 @@ project_root/
 ├── test.py                    # Main pipeline: sensor fusion, prediction, evaluation, visualization
 ├── visualize_scene.py         # Standalone visualization and IoU calculation script
 │
-├── README.md                  # (This file)
+├── README.md                 
 
 ```
 
@@ -102,3 +102,42 @@ Process the raw camera and LiDAR data from both vehicles to:
 🔹 Enhance visibility by addressing sensor occlusions and inconsistencies.
 
 🔹 Output a visual representation showing detected agents from both perspectives.
+
+## 🔍 GUI & Frontend what tech is used
+
+(Dummy text regarding the GUI)
+
+🔹 LiDAR provides accurate 3D data but lacks color information.
+
+🔹 Cameras capture rich visuals but are sensitive to lighting conditions.
+
+## 🔍 GUI & Frontend
+
+The dashboard interface is built using **PyQt6** for a modern, responsive car dashboard look.
+
+### ⚙️ Tech Stack
+
+- **Language:** Python 3
+- **GUI Framework:** [PyQt6](https://pypi.org/project/PyQt6/)
+- **Image Handling:** Qt (QPixmap), OpenCV
+- **Assets:** All UI graphics (like the top-view car) are loaded from the `assets/` folder
+
+### 🖥️ Features
+
+- **Live speed, arrival time, and power display** — values update dynamically, simulating a real car dashboard.
+- **Obstacle detection alert** — shows real-time warnings like `"DANGER: Obstacle within 10m"` in a bold red card if any object is too close.
+- **Image slideshow** — cycles through camera images from the dataset (from `data/CameraA/`), showing the car’s current view.
+- **Theme toggle** — switch between dark and light modes with a single button.
+- **Modern styling** — custom fonts, color-coded status, sidebar icons for navigation, and responsive layout.
+
+### 🏗️ Folder Structure
+
+- `frontend.py` — main application file (run this to start the dashboard)
+- `assets/` — UI images (e.g. `car_top_view.png`)
+- `data/CameraA/` — slideshow camera images shown in the interface
+
+## 📸 Output Example: Sensor Fusion Visualization
+
+This example shows the output of our perception pipeline, fusing LiDAR and camera data to detect obstacles and visualize the scene:
+
+![Sensor Fusion Output](assets/lidar-fusion.png)
